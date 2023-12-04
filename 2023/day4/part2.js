@@ -1,8 +1,6 @@
 const {input} = require('../../input.js');
 let lines = input(__filename)
 
-function split(str, index){[str.slice(0, index), str.slice(index+1, str.length)]};
-
 winningSum = []
 let tickets = new Array(lines.length-1).fill(1)
 lines.forEach((line,i) => {
