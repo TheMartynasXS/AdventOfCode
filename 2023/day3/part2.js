@@ -8,10 +8,7 @@ let getNums = (adj,str,index) => {
         let numbers = split(str,index)
         let first = parseInt(numbers[0].split(".").pop())
         let second = parseInt(numbers[1].split(".").shift())
-        if (isNaN(first) && isNaN(second)) return []
-        if (isNaN(first)) return [second]
-        if (isNaN(second)) return [first]
-        return [first,second]
+        return [first,second].filter(x=>!isNaN(x));
     }
     if(adj && adj.length == 3){
         let first = parseInt(str.slice(index-1,index+2))
@@ -23,9 +20,7 @@ let getNums = (adj,str,index) => {
         let first = parseInt(numbers[0].split(".").pop())
         let second = parseInt(numbers[1].split(".").shift())
         if(!isNaN(first) && !isNaN(second)) return (splitIndex < index ? [second] : [first])
-        if (isNaN(first) && isNaN(second)) return []
-        if (isNaN(first)) return [second]
-        return [first]
+        return [first,second].filter(x=>!isNaN(x));
     }
     return []
 }

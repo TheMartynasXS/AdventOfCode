@@ -3,6 +3,5 @@ const { readFileSync } = require('fs');
 
 exports.input = (path, example = false) =>{
     path = join(dirname(path), example?'example.txt':'data.txt')
-    console.log(path)
     return readFileSync(path).toString().split(/\r\n/);
 };
