@@ -1,5 +1,4 @@
-const {input} = require('../../input.js');
-let lines = input(__filename)
+let lines = require("../../input.js")(__filename);
 let sum = 0;
 const split = (str, index) => [str.slice(0, index), str.slice(index+1, str.length)];
 winningSum = []

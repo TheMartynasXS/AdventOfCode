@@ -1,6 +1,5 @@
-const { input } = require("../../input.js");
-let lines = input(__filename, false);
-t1 = performance.now();
+let lines = require("../../input.js")(__filename);
+
 let a = [];
 let b = [];
 lines.forEach((line) => {
@@ -12,6 +11,4 @@ let result = a.reduce(
   (acc, value) => acc + value * b.filter((item) => item == value).length,
   0
 );
-t2 = performance.now();
-console.log((t2 - t1).toFixed(3) + "ms");
 console.log(result);
