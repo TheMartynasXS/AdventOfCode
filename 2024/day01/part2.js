@@ -3,7 +3,7 @@ let lines = input("2024/day01/data.txt");
 let data = { left: [], right: [] };
 
 lines.forEach((line) => {
-  parts = line.split("   ");
+  let parts = line.split("   ");
   data.left.push(parts[0]);
   data.right.push(parts[1]);
 });
