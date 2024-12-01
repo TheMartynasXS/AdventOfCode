@@ -1,16 +1,14 @@
-let lines = require("../../input.js").input(__filename);
-
-let a = [];
-let b = [];
+let lines = require("../../input.js").input(__filename, false);
+let data = { left: [], right: [] };
 
 lines.forEach((line) => {
-  let l = line.split("   ");
-  a.push(l[0]);
-  b.push(l[1]);
+  parts = line.split("   ");
+  data.left.push(parts[0]);
+  data.right.push(parts[1]);
 });
 
-let result = a.reduce(
-  (acc, value) => acc + value * b.filter((item) => item == value).length,
+let result = data.left.reduce(
+  (acc, cV) => acc + cV * data.right.filter((i) => i == cV).length,
   0
 );
 console.log(result);

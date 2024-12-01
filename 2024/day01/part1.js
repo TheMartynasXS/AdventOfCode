@@ -11,6 +11,6 @@ a.sort();
 b.sort();
 let result = 0;
 for (let i = 0; i < a.length; i++) {
-  a[i] > b[i] ? (result += a[i] - b[i]) : (result += b[i] - a[i]);
+  result += Math.abs(a[i] - b[i]);
 }
 console.log(result);
