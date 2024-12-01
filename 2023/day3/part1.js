@@ -1,4 +1,4 @@
-let lines = require("../../input.js")(__filename);
+let lines = require("../../input.js").input(__filename);
 let sum = 0;
 let numbers = [];
 xlines = [...lines];

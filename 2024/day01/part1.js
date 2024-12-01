@@ -1,5 +1,4 @@
-let lines = require("../../input.js")(__filename);
-
+let lines = require("../../input.js").input(__filename);
 let a = [];
 let b = [];
 lines.forEach((line) => {

@@ -1,4 +1,4 @@
-let lines = require("../../input.js")(__filename);
+let lines = require("../../input.js").input(__filename);
 
 winningSum = [];
 let tickets = new Array(lines.length - 1).fill(1);

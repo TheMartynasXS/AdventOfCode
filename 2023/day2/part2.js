@@ -1,4 +1,4 @@
-let lines = require("../../input.js")(__filename);
+let lines = require("../../input.js").input(__filename);
 t1 = performance.now();
 sum = 0;
 for (let i = 0; i < lines.length; i++) {

@@ -1,4 +1,4 @@
-let lines = require("../../input.js")(__filename);
+let lines = require("../../input.js").input(__filename);
 let sum = 0;
 let numbers = []
 let split = (str, index) => [str.slice(0, index), str.slice(index+1, str.length)];

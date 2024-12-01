@@ -1,5 +1,4 @@
-
-let lines = require("../../input.js")(__filename);
+let lines = require("../../input.js").input(__filename);
 t1 = performance.now();
 let control = [12,13,14]
 sum = 0;
