@@ -1,4 +1,5 @@
-let lines = require("../../input.js").input(__filename, false);
+import input from "../../utils/input.js";
+let lines = input("2024/day01/data.txt");
 let data = { left: [], right: [] };
 
 lines.forEach((line) => {

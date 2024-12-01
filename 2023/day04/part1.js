@@ -1,4 +1,6 @@
-let lines = require("../../input.js").input(__filename);
+import input from "../../utils/input.js";
+let lines = input("2024/day01/data.txt");
+
 let sum = 0;
 const split = (str, index) => [str.slice(0, index), str.slice(index+1, str.length)];
 winningSum = []
@@ -15,5 +17,3 @@ lines.forEach((line,i) => {
 })
 console.log(winningSum)
 console.log(winningSum.reduce((a,b)=>a+b,0))
-
-

@@ -1,5 +1,5 @@
-let lines = require("../../input.js").input(__filename);
-t1 = performance.now();
+import input from "../../utils/input.js";
+let lines = input("2024/day01/data.txt");
 sum = 0;
 for (let i = 0; i < lines.length; i++) {
   games = lines[i].slice(lines[i].indexOf(":") + 2).split("; ");
@@ -22,5 +22,4 @@ for (let i = 0; i < lines.length; i++) {
   }
   if (t) sum += c.reduce((a, b) => a * b, 1);
 }
-console.log((performance.now() - t1).toFixed(3) + "ms");
 console.log(sum);

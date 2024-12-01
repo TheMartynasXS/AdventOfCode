@@ -1,5 +1,5 @@
-let lines = require("../../input.js").input(__filename);
-t1 = performance.now();
+import input from "../../utils/input.js";
+let lines = input("2024/day01/data.txt");
 let control = [12,13,14]
 sum = 0;
 for(let i = 0; i < lines.length; i++){
@@ -19,5 +19,4 @@ for(let i = 0; i < lines.length; i++){
     }
     if (t) sum += i+1;
 }
-console.log((performance.now() - t1).toFixed(3) + "ms");
 console.log(sum)
