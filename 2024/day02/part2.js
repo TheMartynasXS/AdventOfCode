@@ -12,16 +12,13 @@ let safe = lines.filter((row) => {
 }).length;
 
 function test(row, comparator) {
-  let increasing = row[0] < row[1] ? true : false;
   return (
     row.reduce((safe, value, index) => {
       let size = Math.abs(value - row[index - 1]);
       return (
         safe +
         (index == 0 ||
-        (row[index - 1] < value == increasing && size >= 1 && size <= 3)
-          ? 1
-          : 0)
+          (row[index - 1] < value == row[0] < row[1] && size >= 1 && size <= 3))
       );
     }, 0) >= comparator
   );
