@@ -1,5 +1,5 @@
 import input from "../../utils/input.js";
-let lines = input("2024/day01/data.txt");
+let lines = input();
 let sum = 0;
 let numbers = [];
 xlines = [...lines];

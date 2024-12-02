@@ -1,5 +1,5 @@
 import input from "../../utils/input.js";
-let lines = input("2024/day01/data.txt");
+let lines = input();
 sum = 0;
 for (let i = 0; i < lines.length; i++) {
   games = lines[i].slice(lines[i].indexOf(":") + 2).split("; ");

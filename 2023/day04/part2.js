@@ -1,5 +1,5 @@
 import input from "../../utils/input.js";
-let lines = input("2024/day01/data.txt");
+let lines = input();
 
 winningSum = [];
 let tickets = new Array(lines.length - 1).fill(1);

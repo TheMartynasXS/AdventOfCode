@@ -1,9 +1,8 @@
-import input from "../../utils/input.js";
-let lines = input("2024/day02/data.txt").map((line) =>
-  line.split(" ").map(Number)
-);
-
-let safe = lines.filter((row) => {
+import input from "../utils/input.js";
+let lines = input().map((line) => line.split(" ").map(Number));
+let result = { part1: 0, part2: 0 };
+result.part1 = lines.filter((row) => test(row, row.length)).length;
+result.part2 = lines.filter((row) => {
   if (test(row, row.length)) return true;
   for (let i = 0; i < row.length; i++) {
     if (test(row.slice(0, i).concat(row.slice(i + 1)), row.length - 1))
@@ -23,4 +22,4 @@ function test(row, comparator) {
     }, 0) >= comparator
   );
 }
-console.log(safe);
+console.log(result);

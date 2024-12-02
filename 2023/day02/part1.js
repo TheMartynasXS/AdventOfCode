@@ -1,22 +1,22 @@
 import input from "../../utils/input.js";
-let lines = input("2024/day01/data.txt");
-let control = [12,13,14]
+let lines = input();
+let control = [12, 13, 14];
 sum = 0;
-for(let i = 0; i < lines.length; i++){
-    games = lines[i].slice(lines[i].indexOf(":")+2).split("; ")
-    let t = true;
-    for(let j = 0; j < games.length; j++){
-        temp = games[j].split(", ");
-        c = [
-            temp.find(n=>n.endsWith("d"))?.split(" ")[0]<=control[0],
-            temp.find(n=>n.endsWith("n"))?.split(" ")[0]<=control[1],
-            temp.find(n=>n.endsWith("e"))?.split(" ")[0]<=control[2]
-        ]
-        if (c[0]+c[1]+c[2] < temp.length) {
-            t = false;
-            break
-        }
+for (let i = 0; i < lines.length; i++) {
+  games = lines[i].slice(lines[i].indexOf(":") + 2).split("; ");
+  let t = true;
+  for (let j = 0; j < games.length; j++) {
+    temp = games[j].split(", ");
+    c = [
+      temp.find((n) => n.endsWith("d"))?.split(" ")[0] <= control[0],
+      temp.find((n) => n.endsWith("n"))?.split(" ")[0] <= control[1],
+      temp.find((n) => n.endsWith("e"))?.split(" ")[0] <= control[2],
+    ];
+    if (c[0] + c[1] + c[2] < temp.length) {
+      t = false;
+      break;
     }
-    if (t) sum += i+1;
+  }
+  if (t) sum += i + 1;
 }
-console.log(sum)
+console.log(sum);
