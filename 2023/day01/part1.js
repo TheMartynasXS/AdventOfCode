@@ -1,4 +1,4 @@
-import input from "../../utils/input.js";
+import input from "../utils/input.js";
 let lines = input();
 for (var i = 0, sum = 0; i < lines.length; i++) {
   digits = lines[i].match(/\d/g) ?? [0];

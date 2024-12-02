@@ -1,4 +1,4 @@
-import input from "../../utils/input.js";
+import input from "../utils/input.js";
 let lines = input();
 let control = [12, 13, 14];
 sum = 0;

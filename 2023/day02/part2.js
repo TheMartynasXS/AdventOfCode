@@ -1,4 +1,4 @@
-import input from "../../utils/input.js";
+import input from "../utils/input.js";
 let lines = input();
 sum = 0;
 for (let i = 0; i < lines.length; i++) {
